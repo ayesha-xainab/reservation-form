@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Restaurant Reservation</title>
+    <link rel="stylesheet" href="style.css">  <!--Refer to CSS file -->
+    <!--Pikaday JS library stylesheet-->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css"> 
+
+    <!--Google API fonts' reference-->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch" rel="stylesheet">
+    
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">   <!--Resturant Name and information-->
+            <img src="chef.jpg" alt="Restaurant Logo" class="logo">
+            <h1>Steak House</h1>
+            <p>steaking perfection on every plate</p>
+            <hr>
+            <a href="#form" class="btn"> Make your Reservations now</a>
+        </div>
+         
+        <!--Form Area-->
+        <div class="panel">
+            <div class="panel-heading">
+               <h3 class="panel-title"><strong>Reservation Form</strong></h3>
+            </div>
+
+            <section id="form">
+
+                <div class="panel-body">
+                    <form id="reservationForm">
+
+                        <div class="form-group">
+                            <label for="name">NAME:</label>
+                            <input type="text" class="form-control" id="name" placeholder="Enter your Name..." required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">E-MAIL:</label>
+                            <input type="email" class="form-control" id="email" placeholder="example@email.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">PHONE NUMBER:</label>
+                            <input type="tel" class="form-control" id="phone" placeholder="+92 xxx xxxxxxxx" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="date">DATE:</label>
+                            <input type="text" class="form-control" id="date" placeholder="Select the date" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="time">TIME:</label>
+                            <input type="time" class="form-control" id="time" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="guests">NUMBER OF GUESTS:</label>
+                            <input type="number" class="form-control" id="guests" placeholder="Select the number of guests" required>
+                        </div>
+
+                        <div class="form-group">
+                             <label for="requests">SPECIAL REQUESTS:</label>
+                             <textarea class="form-control" id="requests" rows="4" placeholder="Do you have any special requests?"></textarea>
+                        </div>
+
+                        <div>
+                            <button type="submit" class="submit-button"><b>Reserve</b></button>
+                        </div>
+                    </form>   
+                </div>
+
+            </section>
+        </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script> <!--Reference to Pikaday JS library-->
+    <script src="script.js"></script>  <!--Refer to JavaScript file-->
+
+</body>
+</html>
+
+<!--Pikaday Library Script-->
+<script src="pikaday.js"></script>
+<script>
+    var picker = new Pikaday({ field: document.getElementById('datepicker') });
+</script>
